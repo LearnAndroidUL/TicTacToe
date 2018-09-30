@@ -2,39 +2,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".MainActivity">
 
     <TableLayout
+        android:id="@+id/board"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
         <TableRow>
-            <Button android:id="@+id/button0" />
-            <Button android:id="@+id/button1" />
-            <Button android:id="@+id/button2" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="0"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="1"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="2"
+                android:textSize="50sp" />
         </TableRow>
 
         <TableRow>
-            <Button android:id="@+id/button3" />
-            <Button android:id="@+id/button4" />
-            <Button android:id="@+id/button5" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="3"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="4"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="5"
+                android:textSize="50sp" />
         </TableRow>
 
         <TableRow>
-            <Button android:id="@+id/button6" />
-            <Button android:id="@+id/button7" />
-            <Button android:id="@+id/button8" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="6"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="7"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:onClick="pressedBoardButton"
+                android:tag="8"
+                android:textSize="50sp" />
+
         </TableRow>
     </TableLayout>
 
     <TextView
         android:id="@+id/game_state_text_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_above="@id/board"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8sp"
+        android:text="@string/x_turn"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/new_game_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/board"
+        android:layout_alignRight="@id/board"
+        android:onClick="pressedNewGame"
         android:text="@string/new_game" />
 </RelativeLayout>
